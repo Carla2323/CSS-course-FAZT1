@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+/*empezamos a diseñar y ya le sacamos el margin y padding por defecto y derspues empezamos a agregarle nuestras reglas , queda dsitinto a que si no hubiesemos hecho nada*/
+
+p {
+    background: darkred;
+}
+
+h1 {
+    font-size: 40px;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+/*FONT SIZE: tamaño de fuente, en este caso para todos los h1*/
+/*FONT FAMILY: tipo de fuente, está bueno usar una fuente los más genérica o típica posible*/
+/*FONT WEIGHT: peso de la fuente (sería como una negrita o lo opuesto depende que elijas)*/
+/*algunas reglas de css (como estas 3 por ejemplo) pueden resumirse en una sola; escribiriamos: font: bold 40px san serif*/
+
+h2 {
+    font: 20px lighter;
+}
+
+header, section, footer, aside, nav, article {
+    border: 1px solid black;
+    display: block;
+}
+/*quiero seleccionar varias cosas al mismo tiempo por ejemplo ponerles el mismo estilo, entonces los escribo uno al lado del otro*/
+/*le agregue un borde del grosor de 1px, solido (para que sea una linea) y de color negro*/
+/*DISPLAY BLOCK: para asegurarme e que todos los elementos sean en bloque, que esten uno abajo del otro*/
+
+.menu {
+    background: #333a36;
+    padding: 5px ;
+}
+
+.menu li {
+    list-style: none; 
+    border: 1px solid black;
+    padding: 5px;
+    font: bold 14px verdana; 
+    display: inline-block;
+    text-align: left;
+}
+/*para decir que quiero estilizar todos los elementos li que están dentro de un elemento que tenga la clase menu. En este caso le saque unos puntitos que tenia que los hacia parecer tipo lista y no queremos eso*/
+/*INLINE BLOCK: Elemento bloque pero uno al lado del otro (para que luzca más como una navegación)*/
+
+body {
+    text-align: center;
+
+}
+/*quiero que todos los elementos esten centrados o alineados para cierto lado (izquierda, centro, derecha,etc)*/
+
+.header {
+    background: lightsteelblue;
+    border: 1px solid #ccbaba;
+    padding: 20px
+}
+
+.header h1 {
+    text-align: left;
+}
+
+.section {
+    margin: 20px;
+    background: yellow;
+    border: 1px solid black;
+    float: left;
+    width: 60%;
+}
+/*FLOAT: al decirles que están flotando se sale de nuestro html, es decir, del contenido de todo nuestro "agrupar", pero están uno al lado del otro que era lo que queriamos. Queriamos que se olvide de la regla de bloque, pero quedo todo desordenado y eso se arregla con clear (está aca abajo)*/ 
+/*WIDTH 60%: Se usan porcentajes en vez de valores específicos para que se adapte a pantallas mas chicas o grandes que la nuestra*/
+
+article {
+    background: #fffbcc;
+    border: 1px solid #199919;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+time {
+    color: black;
+}
+
+article footer {
+    text-align: right;
+    margin-top: 20px;
+}
+/*Afectamos a todos los footer que esten dentro del article*/
+
+.column {
+    width: 30%;
+    border: 1px solid black;
+    float: left;
+    background: yellow;
+    margin: 20px 0;
+}
+
+.column blockquote {
+    border: 1px dashed black;
+    padding: 40x;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.pie {
+    clear: both;
+    padding: 20px;
+    background: green;
+}
+/*le estamos diciendo que el contenido anterior al pie vuelva a ser parte del html, que no esté flotando. De esta forma queda sin efecto bloque y ordenado*/
+
+img {
+    width: 200px;
+    margin: 20px auto ;
+}
+/*tamaño de la foto*/
+
+.agrupar {
+    background: lightpink;
+    width: 960px;
+    margin-top: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 100px;
+/*venimos del div*/
+/*si ponemos por ejemplo margin: 15px auto, le estamos diciendo que van 15px de margen en el eje y (osea de arriba y abajo) y auto para el eje x (osea de costado a costado). primero se escribe el eje y y luego el eje x /
+/*PADDING: es el espaciado, lo que va hacia adentro. Es el espacio entre el contenido del elemento y su borde*/
+

@@ -1,0 +1,181 @@
+<!--hay 3 formas de usar css principalmente: styles dentro de la etiqueta, styles como etiqueta y como selectores (id, class)
+También se pueden afectar elementos por atributos
+También se pueden agregar estilos por archivos por separado, sirve para no agrandar tanto el html. Para esto creamos un archivo llamado de cualquier forma (en mi caso "styles") y con la extensión "css" y ponemos las reglas que queramos. Tenemos que enlazar el archivo html (en el que estamos parados ahora) con el archivo css, para hacerlo hay una etiqueta html llamada "link", es lo mismo que escribir los etilos en la etiqueta styles pero ahora lo hacemos en un archivo separado, esta es la manera más tipica, se usa para mantener los conceptos de html y css separados, para que sea más fácil de leer -->
+<!DOCTYPE html>
+
+<html lang="es"> 
+
+    <head>
+
+        <title>
+            html course
+        </title>
+        <meta charset="utf-8" />
+        <title>Primer página web</title>
+        <meta name="description" content="Esta es mi primer página web" />
+        <meta name="author" content="Carla" />
+        <meta name="keywords" content="Mi primer título, mi primer página, página web" />
+        <link rel="stylesheet" href="styles.css">
+        <!--se pueden agregar estilos por archivos por separado, sirve para no agrandar tanto el html. Para esto creamos un archivo llamado de cualquier forma (en mi caso "styles") y con la extensión "css" y ponemos las reglas que queramos. Tenemos que enlazar el archivo html (en el que estamos parados ahora) con el archivo css (llamar al archivo de css), para hacerlo hay una etiqueta html llamada "link". Esta etiqueta tiene un atributo llamado rel (relacion) y otro llamado href (nombre del archivo de css)-->
+
+        <style>
+            blockquote[cite] {
+                background: gold;
+            }
+
+            * {
+                background: none;
+            }
+
+            .green {
+                background: lightgray;
+            }
+            
+            #navigation {
+                background: purple;
+                color: red;
+            }
+            
+            #article {
+                background: royalblue;
+                color: salmon;
+            }
+
+            #article2 {
+                background: sienna;
+                color: teal;
+            }
+            
+            
+            header {
+                background: black; 
+                color: pink;
+            }
+
+            footer {
+                background: green;
+            }
+
+        </style>
+        <!--agregamos esta etiqueta en la parte de "head" (porque es lo primero que carga) para que las reglas que aparezcan aca afecte a todos los elementos elegidos que existan en la página-->
+        <!--dentro debemos aclarar a que sector afectara, por ejemplo en este caso el header (igual ya asigne reglas asi que esta no aplicará)-->
+
+        <!-- COMENTARIO SOBRE #NAVIGATION: si queremos seleccionar un id (su descripción está más abajo, con el nav) hay que agregar un # antes del nombre de dicho id para indicar que es un id y no un html-->
+        
+        <!--COMENTARIO SOBRE .green; para seleccionar una clase hay que poner . antes del nombre de la clase-->
+
+        <!--COMENTARIO SOBRE *; Es un selector universal, selecciona TODOS (todos todos) los elementos que encunentra, puse "background; none" para que no haga nada porque sino me hacia un lio con todos los otros cambios. Este selector sirve más que nada para agregar pequeñas clases que podriamos usar en todos los elementos, como por ejemplo sacar todos los espaciados o margenes que vienen por defecto-->
+
+        <!--COMENTARIO SOBRE BLOCKQUOTE[CITE]; se afectan elementos por atributos, en la seccion de "blockquote" está el atributo "cite", para escribirlo indicamos primero la seccion y entre corchetes [] indicamos el atributo que queremos afectar. Si hubiese otra seccion "blockquote" sin el atributo "cite", no e veria afectada por los cambios-->
+
+    </head>
+    
+    <body> 
+
+        <div class="agrupar">
+
+            <header class="header" style="background: red;">
+                <!--Atributo "style", podemos ponerselo a cualquier etiqueta, permite agregarle estilos a un elemento html. En este caso los títulos van a tener un especie de subrayado o fondo color rojo -->
+                <!--este tipo de estilo se llama "estilos en linea"-->
+                <!--Background = fondo-->
+                <h1 style="background: aqua;">Título del Texto</h1> 
+                <!--con el background de arriba estamos asignandole a todos los títulos un color, de esta forma estamos diciendole que solo el h1 sea aqua-->
+    
+                <h2>Subtítulo del texto</h2>
+    
+                <h3>subtitulo 2</h3>
+    
+                <h4>subtitulo 3</h4>
+    
+                <h5>subtitulo 4</h5>
+    
+                <h6>subtitulo 5</h6>
+            
+            </header>
+    
+            <P>mi primer párrafo de html.</P>
+    
+            <nav id="navigation" class="menu">
+                <!--atributo "id", para darle un identificador ÚNICO o nombre clave para luego poder alterarlo, podemos ponerle el nombre que queramos. es recomendable no agregar tildes porque viene del inglés, es ÚNICO; si repetimos el nombre del id en más de una sección, cuando queramos modificarlo los cambios se harán en todas las secciones que compartan dicho id. En caso de que queramos repetir nombres podemos poner por ej: nombre, nombre1, nombre2, etc.. El id e busca en el css.
+                Para agregarlo en la clase styles hay que poner un # antes del nombre del id-->
+                <ul>
+                    <li>principal</li>
+                    <li>ayuda</li>
+                    <li>contacto</li>
+                    
+                    
+                </ul>
+               
+    
+                <ul>
+                    <li>principal 1</li>
+                    <li>ayuda 1</li>
+                    <li>contacto 1</li>
+                    
+                </ul>
+               
+            </nav>
+    
+            <section class="section">
+                <article id="article">
+    
+                    <hgroup>
+                        <h1>titulo primer articulo</h1>
+                    <h2>subtitulo del primer articulo</h2>
+                    </hgroup>
+            
+                    <time datetime="12-10-2018">publicado 12-10-2018</time>
+                    <p>Lorem, ipsum dolor.</p>
+                    <img src="img/IMG_20171011_191301535.jpg"/>
+                    <footer>
+                        <p>Comentarios 10</p>
+                    </footer>
+                    <address>
+                        <a href="http://google.com">"visita a google"</a>
+                    </address>
+                    
+                </article>
+                <article id="article2">
+                    <hgroup>
+                        <h1>titulo segundo articulo</h1>
+                        <h2>subtitulo del segundo articulo</h2>
+                    </hgroup>
+                    <time datetime="13-10-2018">publicado 13-10-2018</time>
+                    <p class="green">Lorem ipsum dolor sit amet consectetur. <small> hola como estas</small>Lorem ipsum dolor sit, amet consectetur adipisicing.<span>bien y vos?</span></p>
+                   
+                    <footer class="green">
+                        <!--atributo "class" es un identificador como el id pero puede er reutilizado. Para colocarlo en la etiqueta style hay que agregar un punto (.) antes del nombre de la clase-->
+                        <p>Comentarios 0</p>
+                    </footer>
+                    
+                </article>
+    
+            </section>
+            
+            <aside class="column">
+                Archivo
+    
+                Acerca de
+                <blockquote cite="http://faztweb.com">citas de autores</blockquote>
+               
+            </aside>
+            
+    
+            <footer style="color: white; background: yellowgreen;" class="pie">
+                <!--le estamos dando un color blanco a la letra pero como el fondo es blanco no se ve, entonces agregamos el subrayado o color de fondo verde-->
+                Derechos reservados 2010-2018
+            </footer>
+
+        </div>
+        <!--División: Elemento de html que fazt se olvidó de mencionar, estos a diferencia de otros elementos, no le dan info al navegador. sirve para los desarrolladores/diseñadores, para poder crear otra division no muy típica. agrega una división más a nuestro contenido, agrupa contenido, se edita luego con css, que podemos llamarlo simplemente como div, o podemos agregarle una clase o id-->
+
+        
+        
+
+    </body>
+
+
+
+</html>
+
+
